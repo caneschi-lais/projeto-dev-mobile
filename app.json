@@ -7,10 +7,10 @@
     "icon": "./assets/images/icon.png",
     "scheme": "diariopet",
     "expo": {
-    "name": "meu-lista-tarefas",
-    "slug": "meu-lista-tarefas",
+    "name": "diario-pet",
+    "slug": "diario-pet",
     "version": "1.0.0",
-    "scheme": "lista-tarefas"
+    "scheme": "diariopet"
   },
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
