@@ -6,10 +6,10 @@ export default function Layout() {
       screenOptions={{
         headerStyle: { backgroundColor: '#f8fafc' },
         headerShadowVisible: false,
-        headerTitleStyle: { fontWeight: 'bold', color: '#1e293b' },
+        headerTitleStyle: { fontWeight: 'bold', color: '#000000' },
       }}
     >
-      <Stack.Screen name="index" options={{ title: 'Diário da Mel 🐾' }} />
+      <Stack.Screen name="index" options={{ title: 'Diário Pet' }} />
       <Stack.Screen name="form" options={{ title: 'Novo Registro', presentation: 'modal' }} />
     </Stack>
   );

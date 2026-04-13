@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { petRepository } from '../database/petRepository';
-import { PetLog, CreatePetLogInput } from '../types/pet';
+import { CreatePetLogInput, PetLog, UpdatePetLogInput } from '../types/pet';
 
 export function usePetLogs() {
     const [logs, setLogs] = useState<PetLog[]>([]);
 
-    const loadLogs = async () => {
-        const data = await petRepository.getAll();
+    const loadLogs = async (filterDate?: string) => {
+        const data = await petRepository.getAll(filterDate);
         setLogs(data);
     };
 
@@ -29,6 +29,5 @@ export function usePetLogs() {
         loadLogs();
     }, []);
 
-    // 👇 2. Exporte a função aqui
     return { logs, addLog, updateLog, deleteLog, loadLogs };
 }

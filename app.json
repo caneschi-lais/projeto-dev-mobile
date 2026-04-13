@@ -7,11 +7,11 @@
     "icon": "./assets/images/icon.png",
     "scheme": "diariopet",
     "expo": {
-    "name": "diario-pet",
-    "slug": "diario-pet",
-    "version": "1.0.0",
-    "scheme": "diariopet"
-  },
+      "name": "diario-pet",
+      "slug": "diario-pet",
+      "version": "1.0.0",
+      "scheme": "diariopet"
+    },
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -45,7 +45,8 @@
           }
         }
       ],
-      "expo-sqlite"
+      "expo-sqlite",
+      "@react-native-community/datetimepicker"
     ],
     "experiments": {
       "typedRoutes": true,

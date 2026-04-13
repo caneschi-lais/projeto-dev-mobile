@@ -1,6 +1,6 @@
-import { View, Text, TouchableOpacity } from 'react-native';
-import { PetLog } from '../types/pet';
 import { Ionicons } from '@expo/vector-icons';
+import { Text, TouchableOpacity, View } from 'react-native';
+import { PetLog } from '../types/pet';
 
 interface Props {
     log: PetLog;
@@ -26,9 +26,9 @@ export function PetLogItem({ log, onDelete, onEdit }: Props) {
             <View className="flex-row gap-2">
                 <TouchableOpacity
                     onPress={() => onEdit(log)}
-                    className="bg-blue-50 p-2 rounded-full"
+                    className="bg-violet-50 p-2 rounded-full"
                 >
-                    <Ionicons name="pencil-outline" size={20} color="#3b82f6" />
+                    <Ionicons name="pencil-outline" size={20} color="#7c3aed" />
                 </TouchableOpacity>
 
                 <TouchableOpacity
