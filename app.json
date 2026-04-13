@@ -6,6 +6,12 @@
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "diariopet",
+    "expo": {
+    "name": "meu-lista-tarefas",
+    "slug": "meu-lista-tarefas",
+    "version": "1.0.0",
+    "scheme": "lista-tarefas"
+  },
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -38,7 +44,8 @@
             "backgroundColor": "#000000"
           }
         }
-      ]
+      ],
+      "expo-sqlite"
     ],
     "experiments": {
       "typedRoutes": true,
