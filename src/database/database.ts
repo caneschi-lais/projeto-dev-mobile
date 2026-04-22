@@ -8,7 +8,6 @@ let dbPromise: Promise<SQLite.SQLiteDatabase> | null = null;
  * Função responsável por abrir a conexão com o banco e retornar a instância.
  */
 export function getDatabase(): Promise<SQLite.SQLiteDatabase> {
-  // Se já existe uma requisição para abrir o banco rolando, retorna ela mesma
   if (dbPromise !== null) {
     return dbPromise;
   }

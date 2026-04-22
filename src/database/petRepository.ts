@@ -28,12 +28,12 @@ export const petRepository = {
     async update(data: UpdatePetLogInput): Promise<void> {
         const db = await getDatabase();
         await db.runAsync(
-            'UPDATE pet_logs SET titulo = ?, descricao = ?, dataRegistro = ?, horaRegistro = ?, concluido = COALESCE(?, concluido) WHERE id = ?',
+            'UPDATE pet_logs SET titulo = ?, descricao = ?, dataRegistro = ?, horaRegistro = ?, concluido = ? WHERE id = ?',
             data.titulo,
             data.descricao,
             data.dataRegistro,
             data.horaRegistro,
-            data.concluido,
+            data.concluido ?? 0,
             data.id
         );
     },

@@ -11,7 +11,7 @@ export default function Home() {
     const [filterDate, setFilterDate] = useState(new Date());
     const [showPicker, setShowPicker] = useState(false);
 
-    const { logs, deleteLog, loadLogs } = usePetLogs();
+    const { logs, deleteLog, loadLogs, updateLog } = usePetLogs();
     const router = useRouter();
 
     const dateString = filterDate.toISOString().split('T')[0];
@@ -28,6 +28,13 @@ export default function Home() {
             setFilterDate(selectedDate);
         }
     };
+
+    const handleToggleStatus = async (log: PetLog) => {
+        await updateLog({
+            ...log,
+            concluido: log.concluido === 1 ? 0 : 1
+        });
+    }
 
     const handleEdit = (log: PetLog) => {
         router.push({
@@ -73,7 +80,7 @@ export default function Home() {
                 data={logs}
                 keyExtractor={(item) => item.id.toString()}
                 renderItem={({ item }) => (
-                    <PetLogItem log={item} onDelete={deleteLog} onEdit={handleEdit} />
+                    <PetLogItem log={item} onDelete={deleteLog} onEdit={handleEdit} onToggleStatus={handleToggleStatus} />
                 )}
                 ListEmptyComponent={() => (
                     <View className="items-center mt-12 px-6">
